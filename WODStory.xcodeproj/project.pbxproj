@@ -16,27 +16,7 @@
 		8E0770D01D99372B00208D9F /* WODStoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0770CF1D99372B00208D9F /* WODStoryUITests.swift */; };
 		8E0770E21D993C0F00208D9F /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0770E11D993C0F00208D9F /* Singleton.swift */; };
 		8E0770E61D993C6B00208D9F /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0770E51D993C6B00208D9F /* DBManager.swift */; };
-		8E07713B1D99445300208D9F /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0771231D99405C00208D9F /* SQLite.framework */; };
 		8EBD52C21D9E32A4009EF442 /* Logging.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52C11D9E32A4009EF442 /* Logging.storyboard */; };
-		8EBD52DB1D9E3AF8009EF442 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52C41D9E3AF8009EF442 /* green.png */; };
-		8EBD52DC1D9E3AF8009EF442 /* pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52C51D9E3AF8009EF442 /* pink.png */; };
-		8EBD52DD1D9E3AF8009EF442 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52C61D9E3AF8009EF442 /* red.png */; };
-		8EBD52DE1D9E3AF8009EF442 /* yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52C71D9E3AF8009EF442 /* yellow.png */; };
-		8EBD52DF1D9E3AF8009EF442 /* Filter01.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52C81D9E3AF8009EF442 /* Filter01.png */; };
-		8EBD52E01D9E3AF8009EF442 /* Filter02.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52C91D9E3AF8009EF442 /* Filter02.png */; };
-		8EBD52E11D9E3AF8009EF442 /* Filter03.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52CA1D9E3AF8009EF442 /* Filter03.png */; };
-		8EBD52E21D9E3AF8009EF442 /* Filter04.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52CB1D9E3AF8009EF442 /* Filter04.png */; };
-		8EBD52E31D9E3AF8009EF442 /* Filter06.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52CC1D9E3AF8009EF442 /* Filter06.png */; };
-		8EBD52E41D9E3AF8009EF442 /* Filter07.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52CD1D9E3AF8009EF442 /* Filter07.png */; };
-		8EBD52E51D9E3AF8009EF442 /* Filter09.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52CE1D9E3AF8009EF442 /* Filter09.png */; };
-		8EBD52E61D9E3AF8009EF442 /* Filter10.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52CF1D9E3AF8009EF442 /* Filter10.png */; };
-		8EBD52E71D9E3AF8009EF442 /* Filter11.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52D01D9E3AF8009EF442 /* Filter11.png */; };
-		8EBD52E81D9E3AF8009EF442 /* FilterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD52D11D9E3AF8009EF442 /* FilterData.swift */; };
-		8EBD52E91D9E3AF8009EF442 /* YJImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD52D31D9E3AF8009EF442 /* YJImagePicker.swift */; };
-		8EBD52EA1D9E3AF8009EF442 /* YJImagePickerStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EBD52D61D9E3AF8009EF442 /* YJImagePickerStoryboard.storyboard */; };
-		8EBD52EB1D9E3AF8009EF442 /* YJSelectPictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD52D71D9E3AF8009EF442 /* YJSelectPictureViewController.swift */; };
-		8EBD52EC1D9E3AF8009EF442 /* YJCropImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD52D81D9E3AF8009EF442 /* YJCropImageViewController.swift */; };
-		8EBD52ED1D9E3AF8009EF442 /* YJEditPictrueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBD52D91D9E3AF8009EF442 /* YJEditPictrueViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,55 +33,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8E0770AB1D99372B00208D9F;
 			remoteInfo = WODStory;
-		};
-		8E0771221D99405C00208D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8E0771181D99405B00208D9F /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247AD31C3F04ED00AE3E12;
-			remoteInfo = "SQLite iOS";
-		};
-		8E0771241D99405C00208D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8E0771181D99405B00208D9F /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247ADD1C3F04ED00AE3E12;
-			remoteInfo = "SQLiteTests iOS";
-		};
-		8E0771261D99405C00208D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8E0771181D99405B00208D9F /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247B3C1C3F3ED000AE3E12;
-			remoteInfo = "SQLite Mac";
-		};
-		8E0771281D99405C00208D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8E0771181D99405B00208D9F /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = EE247B451C3F3ED000AE3E12;
-			remoteInfo = "SQLiteTests Mac";
-		};
-		8E07712A1D99405C00208D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8E0771181D99405B00208D9F /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 03A65E5A1C6BB0F50062603F;
-			remoteInfo = "SQLite tvOS";
-		};
-		8E07712C1D99405C00208D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8E0771181D99405B00208D9F /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 03A65E631C6BB0F60062603F;
-			remoteInfo = "SQLiteTests tvOS";
-		};
-		8E07712E1D99405C00208D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8E0771181D99405B00208D9F /* SQLite.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A121AC451CA35C79005A31D1;
-			remoteInfo = "SQLite watchOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -122,28 +53,7 @@
 		8E0770DE1D993B8E00208D9F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		8E0770E11D993C0F00208D9F /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		8E0770E51D993C6B00208D9F /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
-		8E0771181D99405B00208D9F /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = SQLite/SQLite.xcodeproj; sourceTree = "<group>"; };
 		8EBD52C11D9E32A4009EF442 /* Logging.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Logging.storyboard; sourceTree = "<group>"; };
-		8EBD52C41D9E3AF8009EF442 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
-		8EBD52C51D9E3AF8009EF442 /* pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink.png; sourceTree = "<group>"; };
-		8EBD52C61D9E3AF8009EF442 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
-		8EBD52C71D9E3AF8009EF442 /* yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow.png; sourceTree = "<group>"; };
-		8EBD52C81D9E3AF8009EF442 /* Filter01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Filter01.png; sourceTree = "<group>"; };
-		8EBD52C91D9E3AF8009EF442 /* Filter02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Filter02.png; sourceTree = "<group>"; };
-		8EBD52CA1D9E3AF8009EF442 /* Filter03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Filter03.png; sourceTree = "<group>"; };
-		8EBD52CB1D9E3AF8009EF442 /* Filter04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Filter04.png; sourceTree = "<group>"; };
-		8EBD52CC1D9E3AF8009EF442 /* Filter06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Filter06.png; sourceTree = "<group>"; };
-		8EBD52CD1D9E3AF8009EF442 /* Filter07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Filter07.png; sourceTree = "<group>"; };
-		8EBD52CE1D9E3AF8009EF442 /* Filter09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Filter09.png; sourceTree = "<group>"; };
-		8EBD52CF1D9E3AF8009EF442 /* Filter10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Filter10.png; sourceTree = "<group>"; };
-		8EBD52D01D9E3AF8009EF442 /* Filter11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Filter11.png; sourceTree = "<group>"; };
-		8EBD52D11D9E3AF8009EF442 /* FilterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterData.swift; sourceTree = "<group>"; };
-		8EBD52D31D9E3AF8009EF442 /* YJImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YJImagePicker.swift; sourceTree = "<group>"; };
-		8EBD52D41D9E3AF8009EF442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/YJImagePickerStoryboard.storyboard; sourceTree = "<group>"; };
-		8EBD52D51D9E3AF8009EF442 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/YJImagePickerStoryboard.strings; sourceTree = "<group>"; };
-		8EBD52D71D9E3AF8009EF442 /* YJSelectPictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YJSelectPictureViewController.swift; sourceTree = "<group>"; };
-		8EBD52D81D9E3AF8009EF442 /* YJCropImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YJCropImageViewController.swift; sourceTree = "<group>"; };
-		8EBD52D91D9E3AF8009EF442 /* YJEditPictrueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YJEditPictrueViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E07713B1D99445300208D9F /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +84,6 @@
 		8E0770A31D99372B00208D9F = {
 			isa = PBXGroup;
 			children = (
-				8E0771181D99405B00208D9F /* SQLite.xcodeproj */,
 				8E0770AE1D99372B00208D9F /* WODStory */,
 				8E0770C31D99372B00208D9F /* WODStoryTests */,
 				8E0770CE1D99372B00208D9F /* WODStoryUITests */,
@@ -197,7 +105,6 @@
 		8E0770AE1D99372B00208D9F /* WODStory */ = {
 			isa = PBXGroup;
 			children = (
-				8EBD52DA1D9E3AF8009EF442 /* YJImagePicker */,
 				8EBD52C01D9D149F009EF442 /* Viewcontroller */,
 				8EBD52B81D9D13D0009EF442 /* Storyboards */,
 				8E0770E31D993C1400208D9F /* Item */,
@@ -253,20 +160,6 @@
 			name = Item;
 			sourceTree = "<group>";
 		};
-		8E0771191D99405B00208D9F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8E0771231D99405C00208D9F /* SQLite.framework */,
-				8E0771251D99405C00208D9F /* SQLiteTests iOS.xctest */,
-				8E0771271D99405C00208D9F /* SQLite.framework */,
-				8E0771291D99405C00208D9F /* SQLiteTests Mac.xctest */,
-				8E07712B1D99405C00208D9F /* SQLite.framework */,
-				8E07712D1D99405C00208D9F /* SQLiteTests tvOS.xctest */,
-				8E07712F1D99405C00208D9F /* SQLite.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		8EBD52B81D9D13D0009EF442 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,41 +174,6 @@
 			children = (
 			);
 			name = Viewcontroller;
-			sourceTree = "<group>";
-		};
-		8EBD52D21D9E3AF8009EF442 /* Filter */ = {
-			isa = PBXGroup;
-			children = (
-				8EBD52C41D9E3AF8009EF442 /* green.png */,
-				8EBD52C51D9E3AF8009EF442 /* pink.png */,
-				8EBD52C61D9E3AF8009EF442 /* red.png */,
-				8EBD52C71D9E3AF8009EF442 /* yellow.png */,
-				8EBD52C81D9E3AF8009EF442 /* Filter01.png */,
-				8EBD52C91D9E3AF8009EF442 /* Filter02.png */,
-				8EBD52CA1D9E3AF8009EF442 /* Filter03.png */,
-				8EBD52CB1D9E3AF8009EF442 /* Filter04.png */,
-				8EBD52CC1D9E3AF8009EF442 /* Filter06.png */,
-				8EBD52CD1D9E3AF8009EF442 /* Filter07.png */,
-				8EBD52CE1D9E3AF8009EF442 /* Filter09.png */,
-				8EBD52CF1D9E3AF8009EF442 /* Filter10.png */,
-				8EBD52D01D9E3AF8009EF442 /* Filter11.png */,
-				8EBD52D11D9E3AF8009EF442 /* FilterData.swift */,
-			);
-			name = Filter;
-			sourceTree = "<group>";
-		};
-		8EBD52DA1D9E3AF8009EF442 /* YJImagePicker */ = {
-			isa = PBXGroup;
-			children = (
-				8EBD52D21D9E3AF8009EF442 /* Filter */,
-				8EBD52D31D9E3AF8009EF442 /* YJImagePicker.swift */,
-				8EBD52D61D9E3AF8009EF442 /* YJImagePickerStoryboard.storyboard */,
-				8EBD52D71D9E3AF8009EF442 /* YJSelectPictureViewController.swift */,
-				8EBD52D81D9E3AF8009EF442 /* YJCropImageViewController.swift */,
-				8EBD52D91D9E3AF8009EF442 /* YJEditPictrueViewController.swift */,
-			);
-			name = YJImagePicker;
-			path = "../../Tahoe/tastelog-ios";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,12 +270,6 @@
 			mainGroup = 8E0770A31D99372B00208D9F;
 			productRefGroup = 8E0770AD1D99372B00208D9F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 8E0771191D99405B00208D9F /* Products */;
-					ProjectRef = 8E0771181D99405B00208D9F /* SQLite.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8E0770AB1D99372B00208D9F /* WODStory */,
@@ -427,81 +279,15 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		8E0771231D99405C00208D9F /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = 8E0771221D99405C00208D9F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8E0771251D99405C00208D9F /* SQLiteTests iOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLiteTests iOS.xctest";
-			remoteRef = 8E0771241D99405C00208D9F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8E0771271D99405C00208D9F /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = 8E0771261D99405C00208D9F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8E0771291D99405C00208D9F /* SQLiteTests Mac.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLiteTests Mac.xctest";
-			remoteRef = 8E0771281D99405C00208D9F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8E07712B1D99405C00208D9F /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = 8E07712A1D99405C00208D9F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8E07712D1D99405C00208D9F /* SQLiteTests tvOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SQLiteTests tvOS.xctest";
-			remoteRef = 8E07712C1D99405C00208D9F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8E07712F1D99405C00208D9F /* SQLite.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SQLite.framework;
-			remoteRef = 8E07712E1D99405C00208D9F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		8E0770AA1D99372B00208D9F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8EBD52C21D9E32A4009EF442 /* Logging.storyboard in Resources */,
-				8EBD52DE1D9E3AF8009EF442 /* yellow.png in Resources */,
-				8EBD52EA1D9E3AF8009EF442 /* YJImagePickerStoryboard.storyboard in Resources */,
 				8E0770BA1D99372B00208D9F /* LaunchScreen.storyboard in Resources */,
-				8EBD52DB1D9E3AF8009EF442 /* green.png in Resources */,
 				8E0770B71D99372B00208D9F /* Assets.xcassets in Resources */,
-				8EBD52E51D9E3AF8009EF442 /* Filter09.png in Resources */,
-				8EBD52E61D9E3AF8009EF442 /* Filter10.png in Resources */,
-				8EBD52E21D9E3AF8009EF442 /* Filter04.png in Resources */,
-				8EBD52E01D9E3AF8009EF442 /* Filter02.png in Resources */,
-				8EBD52E11D9E3AF8009EF442 /* Filter03.png in Resources */,
-				8EBD52E41D9E3AF8009EF442 /* Filter07.png in Resources */,
-				8EBD52DD1D9E3AF8009EF442 /* red.png in Resources */,
 				8E0770B51D99372B00208D9F /* Main.storyboard in Resources */,
-				8EBD52DC1D9E3AF8009EF442 /* pink.png in Resources */,
-				8EBD52E31D9E3AF8009EF442 /* Filter06.png in Resources */,
-				8EBD52DF1D9E3AF8009EF442 /* Filter01.png in Resources */,
-				8EBD52E71D9E3AF8009EF442 /* Filter11.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,15 +312,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EBD52E91D9E3AF8009EF442 /* YJImagePicker.swift in Sources */,
 				8E0770B21D99372B00208D9F /* ViewController.swift in Sources */,
-				8EBD52E81D9E3AF8009EF442 /* FilterData.swift in Sources */,
-				8EBD52EC1D9E3AF8009EF442 /* YJCropImageViewController.swift in Sources */,
-				8EBD52EB1D9E3AF8009EF442 /* YJSelectPictureViewController.swift in Sources */,
 				8E0770E21D993C0F00208D9F /* Singleton.swift in Sources */,
 				8E0770B01D99372B00208D9F /* AppDelegate.swift in Sources */,
 				8E0770E61D993C6B00208D9F /* DBManager.swift in Sources */,
-				8EBD52ED1D9E3AF8009EF442 /* YJEditPictrueViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,15 +365,6 @@
 				8E0770B91D99372B00208D9F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		8EBD52D61D9E3AF8009EF442 /* YJImagePickerStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8EBD52D41D9E3AF8009EF442 /* Base */,
-				8EBD52D51D9E3AF8009EF442 /* ko */,
-			);
-			name = YJImagePickerStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
