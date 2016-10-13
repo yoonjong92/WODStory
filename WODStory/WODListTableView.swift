@@ -9,6 +9,8 @@
 import UIKit
 
 class WODListTableView: UITableView {
+    
+    weak var VC:UIViewController?
 
     var defaultURL = "\(URL_PATH)/wods/?limit=20&offset=0"
     var nextURL:String?
@@ -17,6 +19,26 @@ class WODListTableView: UITableView {
     
     var wods = [WODModel]()
     var isLoading = false
+    var isRemain = true
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    override init(frame: CGRect, style: UITableViewStyle) {
+        super.init(frame: frame, style: style)
+        setup()
+    }
+    
+    func setup() {
+        self.delegate = self
+        self.dataSource = self
+        self.register(UINib(nibName: "WODListTableViewCell", bundle: nil), forCellReuseIdentifier: "WODListTableViewCell")
+        
+        self.register(UINib(nibName: "LoadingCell", bundle: nil), forCellReuseIdentifier: "LoadingCell")
+        
+    }
     
     var user:UserModel? {
         didSet {
@@ -25,6 +47,7 @@ class WODListTableView: UITableView {
     }
     
     func refresh() {
+        isRemain = true
         useDefault = true
         wods.removeAll()
         self.reloadData()
@@ -51,6 +74,45 @@ class WODListTableView: UITableView {
 
 }
 
+extension WODListTableView : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isRemain == true {
+            return wods.count + 1
+        }
+        return wods.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 95
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row >= wods.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LoadingCell", for: indexPath)
+            return cell
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WODListTableViewCell", for: indexPath) as? WODListTableViewCell
+        
+        if cell == nil {
+            return WODListTableViewCell()
+        }
+        cell?.title.text = wods[indexPath.row].title
+        cell?.type.text = WODType[wods[indexPath.row].type]
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.row >= wods.count {
+            return
+        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destVC = storyboard.instantiateViewController(withIdentifier: "WODDetailView") as! WODDetailViewController
+        destVC.wod = wods[indexPath.row]
+        VC?.navigationController?.pushViewController(destVC, animated: true)
+    }
+}
+
 extension WODListTableView { //networking
     func API_WODList(urlString:String) {
         
@@ -65,7 +127,6 @@ extension WODListTableView { //networking
         request.timeoutInterval = TimeInterval(REQUEST_TIMEOUT)
         
         NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue()) {(response, data, error) in
-            print(response)
             if((error) != nil) {
                 // If there is an error in the web request, print it to the console
                 print(error?.localizedDescription)
@@ -103,8 +164,9 @@ extension WODListTableView { //networking
             } catch {
                 print(error)
             }
+            self.isRemain = false
+            self.isLoading = false
+            self.reloadData()
         }
-        self.isLoading = false
-        self.reloadData()
     }
 }

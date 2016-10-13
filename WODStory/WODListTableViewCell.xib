@@ -8,11 +8,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="93" id="YdG-I9-tY0">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WODListTableViewCell" rowHeight="93" id="YdG-I9-tY0" customClass="WODListTableViewCell" customModule="WODStory" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="535" height="93"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YdG-I9-tY0" id="8Td-RS-08G">
-                <frame key="frameInset" width="535" height="93"/>
+                <frame key="frameInset" width="535" height="92"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EcL-8e-yLz">
@@ -59,8 +59,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="P3w-28-GZg" firstAttribute="top" secondItem="EcL-8e-yLz" secondAttribute="top" constant="8" id="6tu-xY-eRD"/>
                             <constraint firstItem="Ldc-wf-B4r" firstAttribute="leading" secondItem="P3w-28-GZg" secondAttribute="trailing" constant="8" id="RdF-4X-m2x"/>
+                            <constraint firstItem="P3w-28-GZg" firstAttribute="centerY" secondItem="EcL-8e-yLz" secondAttribute="centerY" id="X9i-yW-5Zg"/>
                             <constraint firstAttribute="trailing" secondItem="Ldc-wf-B4r" secondAttribute="trailing" constant="8" id="aGV-cf-k8Y"/>
                             <constraint firstItem="P3w-28-GZg" firstAttribute="leading" secondItem="EcL-8e-yLz" secondAttribute="leading" constant="8" id="aXU-bs-doF"/>
                             <constraint firstItem="Ldc-wf-B4r" firstAttribute="centerY" secondItem="P3w-28-GZg" secondAttribute="centerY" id="n6X-UC-9VS"/>
@@ -75,6 +75,13 @@
                     <constraint firstItem="EcL-8e-yLz" firstAttribute="leading" secondItem="8Td-RS-08G" secondAttribute="leading" constant="9" id="pfP-1U-GZY"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="result" destination="Ldc-wf-B4r" id="CYj-A5-d91"/>
+                <outlet property="title" destination="RSe-Vm-cKv" id="Y1j-8o-8eS"/>
+                <outlet property="type" destination="OFi-6s-Evo" id="ELf-dL-DG5"/>
+                <outlet property="workouts" destination="qdR-dq-Kyo" id="3Ci-3j-yVh"/>
+            </connections>
             <point key="canvasLocation" x="-37.5" y="-169.5"/>
         </tableViewCell>
     </objects>

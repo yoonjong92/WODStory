@@ -15,6 +15,7 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tableView.VC = self
         // Do any additional setup after loading the view.
     }
 
@@ -43,8 +44,10 @@ class FeedViewController: UIViewController {
     }
     
     func didSuccessLogin() {
-        tableView.user = UserModel.currentUser
-        tableView.refresh()
+        if tableView.wods.count < 1 {
+            tableView.user = UserModel.currentUser
+            tableView.refresh()
+        }
     }
     
 
@@ -80,7 +83,6 @@ extension FeedViewController { // Networking
                 self.didFailLogin()
                 return
             }
-            print(data)
             do {
                 let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary
                 if jsonResult!.count > 0 {

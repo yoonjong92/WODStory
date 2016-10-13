@@ -28,6 +28,11 @@
 		986660421DAE020C00B6BD0B /* WODListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986660411DAE020C00B6BD0B /* WODListTableView.swift */; };
 		987AE23D1DAE367800FBC995 /* WODListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 987AE23C1DAE367800FBC995 /* WODListTableViewCell.xib */; };
 		987AE23F1DAE3AF000FBC995 /* WODListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AE23E1DAE3AF000FBC995 /* WODListTableViewCell.swift */; };
+		987AE2421DAF5A0A00FBC995 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 987AE2411DAF5A0A00FBC995 /* LoadingCell.xib */; };
+		987AE2451DAF5D1800FBC995 /* WODDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AE2441DAF5D1800FBC995 /* WODDetailViewController.swift */; };
+		987AE2471DAF6E0200FBC995 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AE2461DAF6E0200FBC995 /* WorkoutModel.swift */; };
+		987AE2491DAF818200FBC995 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AE2481DAF818200FBC995 /* MainTabBarController.swift */; };
+		987AE24C1DAF875000FBC995 /* LoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AE24B1DAF875000FBC995 /* LoggingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +81,11 @@
 		986660411DAE020C00B6BD0B /* WODListTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WODListTableView.swift; sourceTree = "<group>"; };
 		987AE23C1DAE367800FBC995 /* WODListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WODListTableViewCell.xib; sourceTree = "<group>"; };
 		987AE23E1DAE3AF000FBC995 /* WODListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WODListTableViewCell.swift; sourceTree = "<group>"; };
+		987AE2411DAF5A0A00FBC995 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		987AE2441DAF5D1800FBC995 /* WODDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WODDetailViewController.swift; sourceTree = "<group>"; };
+		987AE2461DAF6E0200FBC995 /* WorkoutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
+		987AE2481DAF818200FBC995 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		987AE24B1DAF875000FBC995 /* LoggingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,8 +210,11 @@
 		8EBD52C01D9D149F009EF442 /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				987AE24A1DAF874200FBC995 /* Logging */,
+				987AE2431DAF5D0500FBC995 /* Detail */,
 				9866603D1DACDD9000B6BD0B /* Feed */,
 				9866603A1DACDD5700B6BD0B /* Auth */,
+				987AE2481DAF818200FBC995 /* MainTabBarController.swift */,
 			);
 			name = Viewcontrollers;
 			sourceTree = "<group>";
@@ -211,6 +224,7 @@
 			children = (
 				9866602D1DA4EF2300B6BD0B /* UserModel.swift */,
 				986660311DA4F44900B6BD0B /* WODModel.swift */,
+				987AE2461DAF6E0200FBC995 /* WorkoutModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -242,11 +256,36 @@
 		986660401DAE01E000B6BD0B /* WODList */ = {
 			isa = PBXGroup;
 			children = (
+				987AE2401DAF59FA00FBC995 /* Cells */,
 				986660411DAE020C00B6BD0B /* WODListTableView.swift */,
-				987AE23C1DAE367800FBC995 /* WODListTableViewCell.xib */,
 				987AE23E1DAE3AF000FBC995 /* WODListTableViewCell.swift */,
 			);
 			name = WODList;
+			sourceTree = "<group>";
+		};
+		987AE2401DAF59FA00FBC995 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				987AE23C1DAE367800FBC995 /* WODListTableViewCell.xib */,
+				987AE2411DAF5A0A00FBC995 /* LoadingCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		987AE2431DAF5D0500FBC995 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				987AE2441DAF5D1800FBC995 /* WODDetailViewController.swift */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		987AE24A1DAF874200FBC995 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				987AE24B1DAF875000FBC995 /* LoggingViewController.swift */,
+			);
+			name = Logging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +402,7 @@
 				986660391DACC9EF00B6BD0B /* Auth.storyboard in Resources */,
 				8E0770BA1D99372B00208D9F /* LaunchScreen.storyboard in Resources */,
 				8E0770B71D99372B00208D9F /* Assets.xcassets in Resources */,
+				987AE2421DAF5A0A00FBC995 /* LoadingCell.xib in Resources */,
 				8E0770B51D99372B00208D9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,13 +430,17 @@
 			files = (
 				8E0770B21D99372B00208D9F /* ViewController.swift in Sources */,
 				9866603C1DACDD8900B6BD0B /* AuthMainViewController.swift in Sources */,
+				987AE2491DAF818200FBC995 /* MainTabBarController.swift in Sources */,
 				986660301DA4F0F200B6BD0B /* StaticInfo.swift in Sources */,
+				987AE2471DAF6E0200FBC995 /* WorkoutModel.swift in Sources */,
 				986660321DA4F44900B6BD0B /* WODModel.swift in Sources */,
 				986660351DA4F78600B6BD0B /* SwiftyJSON.swift in Sources */,
 				9866603F1DACE89600B6BD0B /* LoadingScene.swift in Sources */,
 				987AE23F1DAE3AF000FBC995 /* WODListTableViewCell.swift in Sources */,
+				987AE2451DAF5D1800FBC995 /* WODDetailViewController.swift in Sources */,
 				8E0770E21D993C0F00208D9F /* Singleton.swift in Sources */,
 				986660421DAE020C00B6BD0B /* WODListTableView.swift in Sources */,
+				987AE24C1DAF875000FBC995 /* LoggingViewController.swift in Sources */,
 				9866602B1DA4EE5F00B6BD0B /* FeedViewController.swift in Sources */,
 				9866602E1DA4EF2300B6BD0B /* UserModel.swift in Sources */,
 				8E0770B01D99372B00208D9F /* AppDelegate.swift in Sources */,

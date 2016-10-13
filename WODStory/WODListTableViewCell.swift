@@ -9,6 +9,10 @@
 import UIKit
 
 class WODListTableViewCell: UITableViewCell {
+    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var type: UILabel!
+    @IBOutlet weak var workouts: UILabel!
+    @IBOutlet weak var result: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
