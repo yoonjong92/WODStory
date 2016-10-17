@@ -38,7 +38,19 @@ class WODDetailViewController: UIViewController {
         resultView.isHidden = false
         resultTopSpace.constant = 8
         if wod?.result_time != nil {
-            result.text = wod?.result_time
+            var timeText = ""
+            let min = (wod?.result_time)! / 60
+            let sec = (wod?.result_time)! % 60
+            if sec < 10 {
+                timeText = "\(min):0\(sec)"
+            }else {
+                timeText = "\(min):\(sec)"
+            }
+            if wod?.round != nil && (wod?.round)! > 1{
+                result.text = "\((wod?.round)!)rounds \(timeText)"
+            }else {
+                result.text = timeText
+            }
         }
         else if wod?.result_rounds != nil && wod?.result_rounds != 0 {
             result.text = "\((wod?.result_rounds)!)"
@@ -48,7 +60,10 @@ class WODDetailViewController: UIViewController {
         }else if wod?.result_reps != nil {
             result.text = "\((wod?.result_reps)!)"
             
-        }else {
+        }else if wod?.emomminnute != nil {
+            result.text = "\((wod?.emomminnute)!)"
+        }
+        else {
             resultView.isHidden = true
             resultTopSpace.constant = 0
         }
@@ -109,7 +124,7 @@ extension WODDetailViewController : UITableViewDelegate, UITableViewDataSource {
             }
         }
         cell?.workoutInfo.text = infoText
-        cell?.reps.text = workout.reps
+        cell?.content.text = workout.content
         return cell!
     }
     
@@ -121,5 +136,5 @@ extension WODDetailViewController : UITableViewDelegate, UITableViewDataSource {
 class WODDetailWorkOutTableViewCell : UITableViewCell {
     
     @IBOutlet weak var workoutInfo: UILabel!
-    @IBOutlet weak var reps: UILabel!
+    @IBOutlet weak var content: UILabel!
 }

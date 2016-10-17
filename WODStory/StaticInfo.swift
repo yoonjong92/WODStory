@@ -10,3 +10,4 @@ let URL_PATH = "http://192.168.1.8:8080"
 let REQUEST_TIMEOUT = 30
 
 let WODType = ["","for-time","AMRAP","EMOM","etc"]
+var WorkoutTypeList = [String]()

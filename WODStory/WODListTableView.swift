@@ -12,7 +12,7 @@ class WODListTableView: UITableView {
     
     weak var VC:UIViewController?
 
-    var defaultURL = "\(URL_PATH)/wods/?limit=20&offset=0"
+    var defaultURL = "\(URL_PATH)/wods/?user_id=%d&limit=20&offset=0"
     var nextURL:String?
     var previousURL:String?
     var useDefault = true
@@ -20,6 +20,7 @@ class WODListTableView: UITableView {
     var wods = [WODModel]()
     var isLoading = false
     var isRemain = true
+    var refreshCtr:UIRefreshControl?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -38,25 +39,31 @@ class WODListTableView: UITableView {
         
         self.register(UINib(nibName: "LoadingCell", bundle: nil), forCellReuseIdentifier: "LoadingCell")
         
+        refreshCtr = UIRefreshControl()
+        self.addSubview(refreshCtr!)
+        refreshCtr?.addTarget(self, action: #selector(WODListTableView.refreshCtrValueChanged), for: .valueChanged)
+        
     }
     
-    var user:UserModel? {
-        didSet {
-            defaultURL = "\(URL_PATH)/wods/?user_id=\((user?.id)!)&limit=20&offset=0"
-        }
+    var user:UserModel?
+    
+    func refreshCtrValueChanged(sender:UIRefreshControl) {
+        refresh()
     }
     
-    func refresh() {
+    func refresh(clear:Bool = false) {
         isRemain = true
         useDefault = true
         wods.removeAll()
-        self.reloadData()
+        if clear == true {
+            self.reloadData()
+        }
         searchStart()
     }
     
     func searchStart() {
         if useDefault == true {
-            API_WODList(urlString: defaultURL)
+            API_WODList(urlString: String(format: defaultURL,(user?.id)!))
             useDefault = false
         }else if nextURL != nil {
             API_WODList(urlString: nextURL!)
@@ -96,8 +103,42 @@ extension WODListTableView : UITableViewDelegate, UITableViewDataSource {
         if cell == nil {
             return WODListTableViewCell()
         }
+        cell?.date.text = wods[indexPath.row].date
         cell?.title.text = wods[indexPath.row].title
         cell?.type.text = WODType[wods[indexPath.row].type]
+        cell?.result.text = ""
+        if wods[indexPath.row].type == 1 {
+            if wods[indexPath.row].result_time != nil {
+                let min = wods[indexPath.row].result_time! / 60
+                let sec = wods[indexPath.row].result_time! % 60
+                if sec < 10 {
+                    cell?.result.text = "\(min):0\(sec)"
+                }else {
+                    cell?.result.text = "\(min):\(sec)"
+                }
+            }
+        }else if wods[indexPath.row].type == 2 {
+            if wods[indexPath.row].result_rounds != nil && wods[indexPath.row].result_rounds != 0 {
+                cell?.result.text = "\((wods[indexPath.row].result_rounds)!)"
+                if wods[indexPath.row].result_reps != nil {
+                    cell?.result.text = "\((wods[indexPath.row].result_rounds)!) \((wods[indexPath.row].result_reps)!)"
+                }
+            }else if wods[indexPath.row].result_reps != nil {
+                cell?.result.text = "\((wods[indexPath.row].result_reps)!)"
+            }
+        }else if wods[indexPath.row].type == 3 {
+            if wods[indexPath.row].emomminnute != nil {
+                cell?.result.text = "\((wods[indexPath.row].emomminnute)!)min"
+            }
+        }
+        
+        cell?.workouts.text = ""
+        if wods[indexPath.row].workouts.count > 0 {
+            cell?.workouts.text = wods[indexPath.row].workouts[0].name
+            for i in 1 ..< wods[indexPath.row].workouts.count {
+                cell?.workouts.text = (cell?.workouts.text)! + ", \(wods[indexPath.row].workouts[i].name)"
+            }
+        }
         return cell!
     }
     
@@ -130,7 +171,10 @@ extension WODListTableView { //networking
             if((error) != nil) {
                 // If there is an error in the web request, print it to the console
                 print(error?.localizedDescription)
-                self.isLoading = false
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                    self.refreshCtr?.endRefreshing()
+                }
                 return
             }
             do {
@@ -164,9 +208,12 @@ extension WODListTableView { //networking
             } catch {
                 print(error)
             }
-            self.isRemain = false
-            self.isLoading = false
-            self.reloadData()
+            DispatchQueue.main.async {
+                self.isRemain = false
+                self.isLoading = false
+                self.refreshCtr?.endRefreshing()
+                self.reloadData()
+            }
         }
     }
 }

@@ -15,20 +15,25 @@ class WODModel {
     var type:Int = 0
     var text:String = ""
     var date:String = ""
-    var result_time:String?
+    var round:Int?
+    var result_time:Int?
     var result_rounds,result_reps:Int?
+    var emomminnute,emomperminute:Int?
     var workouts = [WorkoutModel]()
     
     func setfromJSON(_ json:JSON) {
         
         if let tmpInt = json["id"].int { id = tmpInt }
-        if let tmpInt = json["type"].int { type = tmpInt }
         if let tmpString = json["title"].string { title = tmpString }
-        if let tmpString = json["email"].string { text = tmpString }
+        if let tmpInt = json["type"].int { type = tmpInt }
+        if let tmpString = json["text"].string { text = tmpString }
         if let tmpString = json["date"].string { date = tmpString }
-        if let tmpString = json["result_time"].string { result_time = tmpString }
+        if let tmpInt = json["round"].int { round = tmpInt }
+        if let tmpInt = json["result_time"].int { result_time = tmpInt }
         if let tmpInt = json["result_rounds"].int { result_rounds = tmpInt }
         if let tmpInt = json["result_reps"].int { result_reps = tmpInt }
+        if let tmpInt = json["emomminnute"].int { emomminnute = tmpInt }
+        if let tmpInt = json["emomperminute"].int { emomperminute = tmpInt }
         
         workouts.removeAll()
         if json["workouts"] != nil {

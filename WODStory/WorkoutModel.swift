@@ -14,7 +14,7 @@ class WorkoutModel {
     var name:String = ""
     var weight,distance:Int?
     var weight_unit,distance_unit:String?
-    var reps:String?
+    var content:String?
     
     func setfromJSON(_ json:JSON) {
         
@@ -25,6 +25,6 @@ class WorkoutModel {
         if let tmpInt = json["distance"].int { distance = tmpInt }
         if let tmpString = json["weight_unit"].string { weight_unit = tmpString }
         if let tmpString = json["distance_unit"].string { distance_unit = tmpString }
-        if let tmpString = json["reps"].string { reps = tmpString }
+        if let tmpString = json["content"].string { content = tmpString }
     }
 }

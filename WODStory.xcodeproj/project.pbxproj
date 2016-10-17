@@ -33,6 +33,9 @@
 		987AE2471DAF6E0200FBC995 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AE2461DAF6E0200FBC995 /* WorkoutModel.swift */; };
 		987AE2491DAF818200FBC995 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AE2481DAF818200FBC995 /* MainTabBarController.swift */; };
 		987AE24C1DAF875000FBC995 /* LoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AE24B1DAF875000FBC995 /* LoggingViewController.swift */; };
+		987AE24F1DAF935D00FBC995 /* NewWorkoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 987AE24E1DAF935D00FBC995 /* NewWorkoutCell.xib */; };
+		987AE2511DB0B1F600FBC995 /* NewWorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AE2501DB0B1F600FBC995 /* NewWorkoutCell.swift */; };
+		987AE2531DB4D3AE00FBC995 /* RecommendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 987AE2521DB4D3AE00FBC995 /* RecommendTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,9 @@
 		987AE2461DAF6E0200FBC995 /* WorkoutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 		987AE2481DAF818200FBC995 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		987AE24B1DAF875000FBC995 /* LoggingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingViewController.swift; sourceTree = "<group>"; };
+		987AE24E1DAF935D00FBC995 /* NewWorkoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewWorkoutCell.xib; sourceTree = "<group>"; };
+		987AE2501DB0B1F600FBC995 /* NewWorkoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWorkoutCell.swift; sourceTree = "<group>"; };
+		987AE2521DB4D3AE00FBC995 /* RecommendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +195,7 @@
 		8E0770E31D993C1400208D9F /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				987AE24D1DAF934900FBC995 /* Logging */,
 				986660401DAE01E000B6BD0B /* WODList */,
 				8E0770E11D993C0F00208D9F /* Singleton.swift */,
 				9866602F1DA4F0F200B6BD0B /* StaticInfo.swift */,
@@ -284,6 +291,16 @@
 			isa = PBXGroup;
 			children = (
 				987AE24B1DAF875000FBC995 /* LoggingViewController.swift */,
+			);
+			name = Logging;
+			sourceTree = "<group>";
+		};
+		987AE24D1DAF934900FBC995 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				987AE24E1DAF935D00FBC995 /* NewWorkoutCell.xib */,
+				987AE2501DB0B1F600FBC995 /* NewWorkoutCell.swift */,
+				987AE2521DB4D3AE00FBC995 /* RecommendTableViewCell.xib */,
 			);
 			name = Logging;
 			sourceTree = "<group>";
@@ -398,6 +415,8 @@
 			files = (
 				987AE23D1DAE367800FBC995 /* WODListTableViewCell.xib in Resources */,
 				8EBD52C21D9E32A4009EF442 /* Logging.storyboard in Resources */,
+				987AE2531DB4D3AE00FBC995 /* RecommendTableViewCell.xib in Resources */,
+				987AE24F1DAF935D00FBC995 /* NewWorkoutCell.xib in Resources */,
 				986660371DACBEEB00B6BD0B /* db.sqlite3 in Resources */,
 				986660391DACC9EF00B6BD0B /* Auth.storyboard in Resources */,
 				8E0770BA1D99372B00208D9F /* LaunchScreen.storyboard in Resources */,
@@ -429,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E0770B21D99372B00208D9F /* ViewController.swift in Sources */,
+				987AE2511DB0B1F600FBC995 /* NewWorkoutCell.swift in Sources */,
 				9866603C1DACDD8900B6BD0B /* AuthMainViewController.swift in Sources */,
 				987AE2491DAF818200FBC995 /* MainTabBarController.swift in Sources */,
 				986660301DA4F0F200B6BD0B /* StaticInfo.swift in Sources */,

@@ -10,12 +10,16 @@ import UIKit
 
 class FeedViewController: UIViewController {
     
+    var needRefresh = true
+    var onceToken = true
+    
     @IBOutlet weak var tableView: WODListTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.VC = self
+        tableView.user = UserModel.currentUser
         // Do any additional setup after loading the view.
     }
 
@@ -44,9 +48,13 @@ class FeedViewController: UIViewController {
     }
     
     func didSuccessLogin() {
-        if tableView.wods.count < 1 {
-            tableView.user = UserModel.currentUser
-            tableView.refresh()
+        if onceToken {
+            API_WorkoutTypeList()
+            onceToken = false
+        }
+        if needRefresh {
+            needRefresh = false
+            tableView.refresh(clear: true)
         }
     }
     
@@ -76,7 +84,7 @@ extension FeedViewController { // Networking
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.timeoutInterval = TimeInterval(REQUEST_TIMEOUT)
         
-        NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue()) {(response, data, error) in
+        NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue.main) {(response, data, error) in
             if((error) != nil) {
                 // If there is an error in the web request, print it to the console
                 print(error?.localizedDescription)
@@ -108,5 +116,41 @@ extension FeedViewController { // Networking
         }
     }
     
-    
+    func API_WorkoutTypeList() {
+        
+        let urlPath = "\(URL_PATH)/workouttype/"
+        let url: URL = URL(string: urlPath)!
+        let request: NSMutableURLRequest = NSMutableURLRequest(url: url)
+        request.httpMethod = "GET"
+        print(url)
+        
+        request.addValue("Token \(UserModel.currentUser.authtoken)", forHTTPHeaderField: "Authorization")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.timeoutInterval = TimeInterval(REQUEST_TIMEOUT)
+        
+        NSURLConnection.sendAsynchronousRequest(request as URLRequest, queue: OperationQueue()) {(response, data, error) in
+            if((error) != nil) {
+                // If there is an error in the web request, print it to the console
+                print(error?.localizedDescription)
+                self.didFailLogin()
+                return
+            }
+            do {
+                let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSArray
+                if jsonResult!.count > 0 {
+                    
+                    let json = JSON(jsonResult!)
+                    for i in 0 ..< json.count {
+                        if let tmpString = json[i].string { WorkoutTypeList.append(tmpString) }
+                    }
+                    print(WorkoutTypeList)
+                }
+                else {
+                }
+                
+            } catch {
+                print(error)
+            }
+        }
+    }
 }
