@@ -184,6 +184,11 @@ extension WODListTableView { //networking
                     
                     let json = JSON(jsonResult!)
                     
+                    if let tmpString = json["next"].string {
+                        self.nextURL = tmpString
+                    }else {
+                        self.isRemain = false
+                    }
                     
                     if json["results"] != nil{
                         let resultjson = json["results"]
@@ -209,7 +214,6 @@ extension WODListTableView { //networking
                 print(error)
             }
             DispatchQueue.main.async {
-                self.isRemain = false
                 self.isLoading = false
                 self.refreshCtr?.endRefreshing()
                 self.reloadData()

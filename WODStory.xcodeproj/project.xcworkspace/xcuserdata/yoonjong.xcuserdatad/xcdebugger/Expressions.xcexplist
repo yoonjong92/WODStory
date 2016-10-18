@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "AuthMainViewController.(sendApi_User() -&gt; ()).(closure #1):AuthMainViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FeedViewController.viewWillAppear(Bool) -&gt; ():FeedViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "UserModel.currentUser">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AuthMainViewController.sendApi_User() -&gt; ():AuthMainViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

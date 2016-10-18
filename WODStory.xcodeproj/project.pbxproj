@@ -36,6 +36,7 @@
 		987AE24F1DAF935D00FBC995 /* NewWorkoutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 987AE24E1DAF935D00FBC995 /* NewWorkoutCell.xib */; };
 		987AE2511DB0B1F600FBC995 /* NewWorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AE2501DB0B1F600FBC995 /* NewWorkoutCell.swift */; };
 		987AE2531DB4D3AE00FBC995 /* RecommendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 987AE2521DB4D3AE00FBC995 /* RecommendTableViewCell.xib */; };
+		987AE2561DB5F5AA00FBC995 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987AE2551DB5F5AA00FBC995 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		987AE24E1DAF935D00FBC995 /* NewWorkoutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewWorkoutCell.xib; sourceTree = "<group>"; };
 		987AE2501DB0B1F600FBC995 /* NewWorkoutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWorkoutCell.swift; sourceTree = "<group>"; };
 		987AE2521DB4D3AE00FBC995 /* RecommendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendTableViewCell.xib; sourceTree = "<group>"; };
+		987AE2551DB5F5AA00FBC995 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 		8EBD52C01D9D149F009EF442 /* Viewcontrollers */ = {
 			isa = PBXGroup;
 			children = (
+				987AE2541DB5F59300FBC995 /* Search */,
 				987AE24A1DAF874200FBC995 /* Logging */,
 				987AE2431DAF5D0500FBC995 /* Detail */,
 				9866603D1DACDD9000B6BD0B /* Feed */,
@@ -303,6 +306,14 @@
 				987AE2521DB4D3AE00FBC995 /* RecommendTableViewCell.xib */,
 			);
 			name = Logging;
+			sourceTree = "<group>";
+		};
+		987AE2541DB5F59300FBC995 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				987AE2551DB5F5AA00FBC995 /* SearchViewController.swift */,
+			);
+			name = Search;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,6 +470,7 @@
 				987AE23F1DAE3AF000FBC995 /* WODListTableViewCell.swift in Sources */,
 				987AE2451DAF5D1800FBC995 /* WODDetailViewController.swift in Sources */,
 				8E0770E21D993C0F00208D9F /* Singleton.swift in Sources */,
+				987AE2561DB5F5AA00FBC995 /* SearchViewController.swift in Sources */,
 				986660421DAE020C00B6BD0B /* WODListTableView.swift in Sources */,
 				987AE24C1DAF875000FBC995 /* LoggingViewController.swift in Sources */,
 				9866602B1DA4EE5F00B6BD0B /* FeedViewController.swift in Sources */,

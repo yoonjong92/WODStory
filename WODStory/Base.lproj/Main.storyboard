@@ -248,11 +248,11 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="yaL-oK-vcK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eyy-fR-rZM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="jgZ-mm-zh4"/>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="jgZ-mm-zh4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iF1-9m-3sJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -267,10 +267,10 @@
             </objects>
             <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="Z9P-8c-SJw">
             <objects>
-                <viewController id="BTd-jz-DIj" sceneMemberID="viewController">
+                <viewController id="BTd-jz-DIj" customClass="SearchViewController" customModule="WODStory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3rn-Vo-b9s"/>
                         <viewControllerLayoutGuide type="bottom" id="cwb-MA-Gtg"/>
@@ -278,9 +278,30 @@
                     <view key="view" contentMode="scaleToFill" id="YLz-qz-FsY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tSw-oX-0jG">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c1s-TK-3d1" customClass="SearchWODListTableView" customModule="WODStory" customModuleProvider="target">
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tSw-oX-0jG" firstAttribute="leading" secondItem="YLz-qz-FsY" secondAttribute="leading" id="A9f-vT-c8r"/>
+                            <constraint firstItem="tSw-oX-0jG" firstAttribute="top" secondItem="3rn-Vo-b9s" secondAttribute="bottom" id="Gfy-ZP-YlY"/>
+                            <constraint firstAttribute="trailing" secondItem="c1s-TK-3d1" secondAttribute="trailing" id="KOf-9a-Fu7"/>
+                            <constraint firstAttribute="trailing" secondItem="tSw-oX-0jG" secondAttribute="trailing" id="Q9N-w4-maR"/>
+                            <constraint firstItem="c1s-TK-3d1" firstAttribute="leading" secondItem="YLz-qz-FsY" secondAttribute="leading" id="Zd8-sT-lCN"/>
+                            <constraint firstItem="c1s-TK-3d1" firstAttribute="top" secondItem="tSw-oX-0jG" secondAttribute="bottom" id="eax-Wn-pUZ"/>
+                            <constraint firstItem="cwb-MA-Gtg" firstAttribute="top" secondItem="c1s-TK-3d1" secondAttribute="bottom" id="iuZ-AU-bPk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="n6U-Vr-s6c"/>
+                    <connections>
+                        <outlet property="searchBar" destination="tSw-oX-0jG" id="5No-iu-dpe"/>
+                        <outlet property="tableView" destination="c1s-TK-3d1" id="i5T-bQ-jch"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q33-6p-9id" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -305,11 +326,11 @@
             </objects>
             <point key="canvasLocation" x="118" y="830"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="4jd-7V-34v">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fl1-hE-la3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="QzY-DT-0Wp"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="QzY-DT-0Wp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dRn-U0-Z8w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

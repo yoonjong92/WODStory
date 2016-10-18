@@ -311,7 +311,7 @@ class LoggingViewController: UIViewController {
         var count = 0
         for workoutType in WorkoutTypeList {
             let cont = workoutType.lowercased().replacingOccurrences(of: " ", with: "")
-            let word = sender.text?.lowercased().replacingOccurrences(of: "", with: "")
+            let word = sender.text?.lowercased().replacingOccurrences(of: " ", with: "")
             if cont.contains(word!) || word == "" {
                 matchList.append(workoutType)
                 count += 1
